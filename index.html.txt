@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Official Messaging</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style>
+body{
+font-family: Arial, sans-serif;
+background:#f4f6f9;
+margin:0;
+text-align:center;
+}
+
+
+.header{
+background:#0a58ca;
+color:white;
+padding:20px;
+font-size:22px;
+}
+
+
+.container{
+margin-top:40px;
+}
+
+
+.card{
+background:white;
+padding:25px;
+margin:auto;
+width:90%;
+max-width:400px;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+button{
+background:#0a58ca;
+color:white;
+border:none;
+padding:14px;
+width:100%;
+margin-top:10px;
+border-radius:8px;
+font-size:16px;
+}
+
+
+button:hover{
+background:#084298;
+}
+</style>
+</head>
+
+
+<body>
+
+
+<div class="header">
+Official Messaging Platform
+</div>
+
+
+<div class="container">
+<div class="card">
+
+
+<h2>Contact</h2>
+<p>Secure communication portal</p>
+
+
+<a href="tel:+13673334412">
+<button>Call Now</button>
+</a>
+
+
+<a href="sms:+13673334412">
+<button>Send SMS</button>
+</a>
+
+
+</div>
+</div>
+
+
+</body>
+</html>
