@@ -6,27 +6,29 @@
 body{
 font-family: Arial, sans-serif;
 margin:0;
-background:#f3f4f6;
+background:#eef2f7;
 }
 
 header{
-background:#2563eb;
+background:linear-gradient(135deg,#2563eb,#1e40af);
 color:white;
 text-align:center;
-padding:40px 20px;
+padding:50px 20px;
 }
 
 header h1{
 margin:0;
-font-size:36px;
+font-size:38px;
 }
 
 nav{
-background:black;
+background:#111;
 display:flex;
 justify-content:center;
 gap:30px;
 padding:15px;
+position:sticky;
+top:0;
 }
 
 nav a{
@@ -36,146 +38,72 @@ font-weight:bold;
 }
 
 section{
-padding:40px 20px;
-max-width:700px;
+max-width:900px;
 margin:auto;
+padding:40px 20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
 }
 
 .card{
 background:white;
 padding:20px;
-border-radius:12px;
-margin-bottom:20px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+border-radius:14px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.price{
+font-size:18px;
+font-weight:bold;
+margin-top:5px;
 }
 
 button{
 background:#2563eb;
 color:white;
 border:none;
-padding:12px 20px;
+padding:12px 18px;
 border-radius:8px;
 cursor:pointer;
 margin-top:10px;
 }
 
 button:hover{
-background:#1e4fd1;
+background:#1e40af;
+}
+
+.whatsapp{
+background:#25D366;
+}
+
+.whatsapp:hover{
+background:#1da851;
 }
 
 input{
 width:100%;
-padding:10px;
+padding:12px;
 margin-top:10px;
-border-radius:6px;
+border-radius:8px;
 border:1px solid #ccc;
 }
-</style></head><body><header>
-<h1>Premium Mobile Numbers Store</h1>
-<p>Buy Exclusive Phone Numbers Instantly</p>
-</header><nav>
-<a href="#numbers">Available Numbers</a>
-<a href="#signup">Sign Up</a>
-<a href="#contact">Contact</a>
-</nav><section id="numbers">
-<h2>Available Numbers</h2><div class="card">
-<h3>+1 (367) 333-4412</h3>
-<p>Premium easy-to-remember number</p>
-<p><b>Price: $50</b></p>
-<a href="#contact"><button>Buy Now</button></a>
-</div><div class="card">
-<h3>+1 (555) 880-1122</h3>
-<p>Business class number</p>
-<p><b>Price: $75</b></p>
-<a href="#contact"><button>Buy Now</button></a>
-</div></section><section id="signup">
-<h2>Sign Up</h2>
-<div class="card">
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<button>Create Account</button>
-</div>
-</section><section id="contact">
-<h2>Contact</h2>
-<div class="card">
-<p>Email: yourgmail@gmail.com</p>
-<p>Phone: +1 (367) 333-4412</p>
-<a href="mailto:yourgmail@gmail.com">
-<button>Send Message</button>
-</a>
-</div>
-</section></body>
-</html><!DOCTYPE html><html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premium Mobile Numbers Store</title><style>
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#f3f4f6;
-}
 
-header{
-background:#2563eb;
+footer{
+background:#111;
 color:white;
 text-align:center;
-padding:40px 20px;
-}
-
-header h1{
-margin:0;
-font-size:36px;
-}
-
-nav{
-background:black;
-display:flex;
-justify-content:center;
-gap:30px;
-padding:15px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-font-weight:bold;
-}
-
-section{
-padding:40px 20px;
-max-width:700px;
-margin:auto;
-}
-
-.card{
-background:white;
 padding:20px;
-border-radius:12px;
-margin-bottom:20px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+margin-top:40px;
 }
 
-button{
-background:#2563eb;
-color:white;
-border:none;
-padding:12px 20px;
-border-radius:8px;
-cursor:pointer;
-margin-top:10px;
+@media(max-width:700px){
+.grid{
+grid-template-columns:1fr;
 }
-
-button:hover{
-background:#1e4fd1;
-}
-
-input{
-width:100%;
-padding:10px;
-margin-top:10px;
-border-radius:6px;
-border:1px solid #ccc;
 }
 </style></head><body><header>
 <h1>Premium Mobile Numbers Store</h1>
@@ -185,31 +113,48 @@ border:1px solid #ccc;
 <a href="#signup">Sign Up</a>
 <a href="#contact">Contact</a>
 </nav><section id="numbers">
-<h2>Available Numbers</h2><div class="card">
+<h2>Available Numbers</h2><div class="grid"><div class="card">
 <h3>+1 (367) 333-4412</h3>
 <p>Premium easy-to-remember number</p>
-<p><b>Price: $50</b></p>
-<a href="#contact"><button>Buy Now</button></a>
+<p class="price">$5</p>
+<button onclick="buyNumber('3673334412')">Buy Now</button>
 </div><div class="card">
 <h3>+1 (555) 880-1122</h3>
 <p>Business class number</p>
-<p><b>Price: $75</b></p>
-<a href="#contact"><button>Buy Now</button></a>
-</div></section><section id="signup">
-<h2>Sign Up</h2>
+<p class="price">$7</p>
+<button onclick="buyNumber('5558801122')">Buy Now</button>
+</div><div class="card">
+<h3>+1 (404) 777-9900</h3>
+<p>Luxury VIP number</p>
+<p class="price">$12</p>
+<button onclick="buyNumber('4047779900')">Buy Now</button>
+</div><div class="card">
+<h3>+1 (212) 999-8888</h3>
+<p>Elite memorable number</p>
+<p class="price">$15</p>
+<button onclick="buyNumber('2129998888')">Buy Now</button>
+</div></div>
+</section><section id="signup">
+<h2>Create Account</h2>
 <div class="card">
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
+<input type="text" placeholder="Full Name">
+<input type="email" placeholder="Email Address">
+<input type="password" placeholder="Password">
 <button>Create Account</button>
 </div>
 </section><section id="contact">
 <h2>Contact</h2>
 <div class="card">
-<p>Email: yourgmail@gmail.com</p>
-<p>Phone: +1 (367) 333-4412</p>
-<a href="mailto:yourgmail@gmail.com">
-<button>Send Message</button>
+<p>Email:herbertluismertinez441@gmail.com</p>
+<p>Phone: +1 (367) 333-4412</p><a href="https://wa.me/13673334412">
+<button class="whatsapp">Chat on WhatsApp</button>
 </a>
 </div>
-</section></body>
+</section><footer>
+© 2026 Premium Numbers Store
+</footer><script>
+function buyNumber(number){
+alert("You selected number: " + number + ". Please contact us to complete purchase.");
+}
+</script></body>
 </html>
